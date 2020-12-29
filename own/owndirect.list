@@ -8,4 +8,4 @@
 #SRT-PORT
 #PROCESS-NAME
 
-PROCESS-NAME,csgo.exe
+#PROCESS-NAME,csgo.exe
