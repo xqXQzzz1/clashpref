@@ -156,7 +156,7 @@ dns:
     - 'stun.*.*'
     - 'stun.*.*.*'
   nameserver:
-    # - 218.2.135.1 
+    - 218.2.135.1 
 
     # - 223.5.5.5 # 阿里DNS
     # - 180.76.76.76 # 百度DNS
@@ -167,8 +167,8 @@ dns:
     # - https://doh.360.cn/dns-query # 360 DoH DNS
   fallback:
     # - 1.1.1.1
-    - 8.8.8.8 # 谷歌DNS
-    # - tls://dns.rubyfish.cn:853
+    # - 8.8.8.8 # 谷歌DNS
+    - tls://dns.rubyfish.cn:853
     # - tls://1.0.0.1:853
     # - tls://dns.google:853
     # - https://dns.rubyfish.cn/dns-query
