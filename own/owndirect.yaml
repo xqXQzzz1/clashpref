@@ -1,13 +1,13 @@
-# DOMAIN-SUFFIX
-# DOMAIN-KEYWORD
-# DOMAIN
-# GEOIP
-# SRC-IP-CIDR
-# IP-CIDR
-# DST-PORT
-# SRT-PORT
-# PROCESS-NAME
-# classical
 payload:
+  # DOMAIN-SUFFIX
+  # DOMAIN-KEYWORD
+  # DOMAIN
+  # GEOIP
+  # SRC-IP-CIDR
+  # IP-CIDR
+  # DST-PORT
+  # SRT-PORT
+  # PROCESS-NAME
+  # classical
   - PROCESS-NAME,csgo.exe
   - DOMAIN-KEYWORD,nfmovies

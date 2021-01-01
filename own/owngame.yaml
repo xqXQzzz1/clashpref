@@ -9,6 +9,7 @@ payload:
   # SRT-PORT
   # PROCESS-NAME
   # classical
+  
   # League of Legends (Japan) (with Riot Games)
   - PROCESS-NAME,jpatch.exe
   - PROCESS-NAME,RiotClientCrashHandler.exe
