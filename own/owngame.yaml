@@ -1,14 +1,14 @@
-# DOMAIN-SUFFIX
-# DOMAIN-KEYWORD
-# DOMAIN
-# GEOIP
-# SRC-IP-CIDR
-# IP-CIDR
-# DST-PORT
-# SRT-PORT
-# PROCESS-NAME
-# classical
 payload:
+  # DOMAIN-SUFFIX
+  # DOMAIN-KEYWORD
+  # DOMAIN
+  # GEOIP
+  # SRC-IP-CIDR
+  # IP-CIDR
+  # DST-PORT
+  # SRT-PORT
+  # PROCESS-NAME
+  # classical
   # League of Legends (Japan) (with Riot Games)
   - PROCESS-NAME,jpatch.exe
   - PROCESS-NAME,RiotClientCrashHandler.exe
