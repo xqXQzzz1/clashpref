@@ -7,5 +7,7 @@
 #DST-PORT
 #SRT-PORT
 #PROCESS-NAME
-
-PROCESS-NAME,steamwebhelper.exe
+# classical
+payload:
+  - PROCESS-NAME,csgo.exe
+  - DOMAIN-KEYWORD,nfmovies
