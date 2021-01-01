@@ -69,7 +69,7 @@ dns:
   # 仅填写 DNS 服务器的 IP 地址
   default-nameserver:
     - 114.114.114.114
-    - 8.8.8.8
+    - 119.29.29.29
   enhanced-mode: redir-host # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
