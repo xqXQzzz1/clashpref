@@ -1,3 +1,4 @@
+payload:
 # DOMAIN-SUFFIX
 # DOMAIN-KEYWORD
 # DOMAIN
@@ -8,5 +9,5 @@
 # SRT-PORT
 # PROCESS-NAME
 # classical
-payload:
+
   - DOMAIN,stun.douyucdn.cn
