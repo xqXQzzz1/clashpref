@@ -11,3 +11,4 @@ payload:
   # classical
 
   - PROCESS-NAME,steamwebhelper.exe
+  - PROCESS-NAME,com.valvesoftware.android.steam.community
