@@ -1,16 +1,75 @@
+# Clash & ClashR
 {% if request.target == "clash" or request.target == "clashr" %}
 
-port: {{ default(global.clash.http_port, "7890") }}
-socks-port: {{ default(global.clash.socks_port, "7891") }}
-allow-lan: {{ default(global.clash.allow_lan, "true") }}
-mode: Rule
-log-level: {{ default(global.clash.log_level, "info") }}
-external-controller: :9090
-{% if default(request.clash.dns, "") == "1" %}
-dns:
-  enabled: true
-  listen: 1053
+mixed-port: {{ global.clash.mixed_port }}
+
+{% if default(request.clash.magisk, "") == "true" %}
+
+redir-port: {{ global.clash.redir_port }}
+
 {% endif %}
+
+allow-lan: {{ global.clash.allow_lan }}
+mode: rule
+log-level: {{ global.clash.log_level }}
+external-controller: 0.0.0.0:9090
+
+# Clash DoH
+
+{% if default(request.clash.magisk, "") == "true" %}
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  enhanced-mode: redir-host # fake-ip
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+  fallback:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+
+{% else %}
+
+{% if default(request.clash.doh, "") == "true" %}
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: redir-host # fake-ip
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+  fallback:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+{% endif %}
+{% endif %}
+
+
+{% if default(request.clash.tun, "") == "true" %}
+{% if default(request.clash.magisk, "") == "true" %}
+tun:
+  enable: true
+  stack: system
+{% else %}
+tun:
+  enable: true
+  stack: gvisor # only gvisor
+  dns-hijack:
+    - 198.18.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53
+{% endif %}
+{% endif %}
+
 {% if local.clash.new_field_name == "true" %}
 proxies: ~
 proxy-groups: ~
@@ -22,18 +81,22 @@ Rule: ~
 {% endif %}
 
 {% endif %}
-{% if request.target == "surge" %}
 
+# Clash & ClashR End
+
+{% if request.target == "surge" %}
 [General]
 loglevel = notify
 bypass-system = true
-skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, e.crashlytics.com, captive.apple.com, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1
 #DNS设置或根据自己网络情况进行相应设置
-bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
-dns-server = 119.29.29.29,223.5.5.5
-
+bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+dns-server = 119.29.29.29, 223.5.5.5, 1.1.1.1, 8.8.8.8
+{% if default(request.surge.doh, "") == "true" %}
+doh-format = wireformat
+doh-server = https://dns.alidns.com/dns-query
+{% endif %}
 [Script]
-http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 {% endif %}
 {% if request.target == "loon" %}
