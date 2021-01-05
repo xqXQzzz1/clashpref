@@ -1,17 +1,14 @@
 # Clash & ClashR
+# 从 配置文件 中获取，判断前缀为 global
+# 从 外部配置 中获取，判断前缀为 local
+# 从 URL 链接中获取，判断前缀为 request，例如 http://127.0.0.1:25500/sub?target=clash&url=www.xxx.com&clash.dns=1
 {% if request.target == "clash" or request.target == "clashr" %}
 
-mixed-port: {{ global.clash.mixed_port }}
+mixed-port: {{ local.clash.mixed_port }}
 
-{% if default(request.clash.magisk, "") == "true" %}
-
-redir-port: {{ global.clash.redir_port }}
-
-{% endif %}
-
-allow-lan: {{ global.clash.allow_lan }}
+allow-lan: {{ local.clash.allow_lan }}
 mode: rule
-log-level: {{ global.clash.log_level }}
+log-level: {{ local.clash.log_level }}
 external-controller: 0.0.0.0:9090
 
 # Clash DoH
@@ -154,7 +151,7 @@ skip-server-cert-verify = true
 
 [TCP]
 
-[GLOBAL]
+[local]
 
 [HOST]
 
@@ -181,7 +178,7 @@ server=8.8.8.8
 [policy]
 static=♻️ 自动选择, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Auto.png
 static=🔰 节点选择, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Proxy.png
-static=🌍 国外媒体, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/GlobalMedia.png
+static=🌍 国外媒体, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/localMedia.png
 static=🌏 国内媒体, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/DomesticMedia.png
 static=Ⓜ️ 微软服务, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png
 static=📲 电报信息, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png
