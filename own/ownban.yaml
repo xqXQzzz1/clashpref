@@ -9,4 +9,4 @@ payload:
   # SRT-PORT
   # PROCESS-NAME
   # classical
-  - DOMAIN,stun.douyucdn.cn
+  # - DOMAIN,stun.douyucdn.cn
