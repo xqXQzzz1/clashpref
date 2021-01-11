@@ -11,3 +11,4 @@ payload:
   # classical
   - DOMAIN,scholar.google.com
   - DOMAIN,scholar.googleusercontent.com
+  - DOMAIN-KEYWORD,scholar
