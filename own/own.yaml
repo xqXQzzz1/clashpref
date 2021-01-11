@@ -10,3 +10,4 @@ payload:
   # PROCESS-NAME
   # classical
   - DOMAIN,scholar.google.com
+  - DOMAIN,scholar.googleusercontent.com
