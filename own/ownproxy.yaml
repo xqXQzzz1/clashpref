@@ -25,3 +25,5 @@ payload:
   - DOMAIN-KEYWORD,dk123
   - DOMAIN-KEYWORD,vercel
   - DOMAIN-KEYWORD,rsshub
+  - DOMAIN,freestyler.ws
+  - DOMAIN,userstyles.org
