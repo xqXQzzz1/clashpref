@@ -79,141 +79,141 @@ custom:
     # - {rule: 'GEOIP,CN', group: 'DIRECT'}
     # - {ruleset: 'rules/LocalAreaNetwork.list', group: 'DIRECT'}
     # - {ruleset: 'surge:rules/LocalAreaNetwork.list', group: 'DIRECT'}
-    # - {ruleset: 'quanx:https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list', group: 'Advertising', interval: 86400}
+    # - {ruleset: 'quanx:https://raw.staticdn.net/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list', group: 'Advertising', interval: 86400}
     # - {ruleset: 'clash-domain:https://ruleset.dev/clash_domestic_services_domains', group: 'Domestic Services', interval: 86400}
     # - {ruleset: 'clash-ipcidr:https://ruleset.dev/clash_domestic_services_ips', group: 'Domestic Services', interval: 86400}
-    # - {ruleset: 'clash-classic:https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml', group: 'DIRECT', interval: 86400}
+    # - {ruleset: 'clash-classic:https://raw.staticdn.net/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml', group: 'DIRECT', interval: 86400}
     # - {import: snippets/groups_forcerule.txt}
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml",
         group: "DIRECT",
         interval: 86400,
       }
 
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownban.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/ownban.yaml",
         group: "REJECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owndirect.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/owndirect.yaml",
         group: "DIRECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownproxy.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/ownproxy.yaml",
         group: "🚀 节点选择",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/own.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/own.yaml",
         group: "🧱 砖块代理",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owngame.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/owngame.yaml",
         group: "🎮 游戏代理",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owngamecom.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/owngamecom.yaml",
         group: "🎮 游戏论坛",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
         group: "DIRECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml",
         group: "🎶 网易音乐",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
         group: "🆎 广告净化",
         interval: 86400,
       }
     - {
-        ruleset: "clash-domain:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml",
+        ruleset: "clash-domain:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml",
         group: "🆎 广告净化",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml",
         group: "📢 谷歌FCM",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml",
         group: "🌍 国外媒体",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml",
         group: "🌍 国外媒体",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
         group: "📲 社交软件",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
         group: "📲 社交软件",
         interval: 86400,
       }
     # - {
-    #     ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
+    #     ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
     #     group: "📲 社交软件",
     #     interval: 86400,
     #   }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
         group: "📲 社交软件",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml",
         group: "Ⓜ️ 微软云盘",
         interval: 86400,
       }
     - {
-        ruleset: "clash-ipcidr:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs.yaml",
+        ruleset: "clash-ipcidr:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs.yaml",
         group: "DIRECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTest/ChinaTest.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTest/ChinaTest.yaml",
         group: "DIRECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-domain:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTest/ChinaTest_Domain.yaml",
+        ruleset: "clash-domain:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTest/ChinaTest_Domain.yaml",
         group: "DIRECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WhiteList/WhiteList.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/WhiteList/WhiteList.yaml",
         group: "DIRECT",
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml",
+        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml",
         group: "🚀 节点选择",
         interval: 86400,
       }
     - {
-        ruleset: "clash-domain:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml",
+        ruleset: "clash-domain:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml",
         group: "🚀 节点选择",
         interval: 86400,
       }
     - { rule: "GEOIP,CN", group: "DIRECT" }
     - { rule: "MATCH", group: "🐟 漏网之鱼" }
 
-  clash_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/GeneralClashConfig.yml
+  clash_rule_base: https://raw.staticdn.net/xqXQzzz1/clashpref/main/base/GeneralClashConfig.yml
   #  surge_rule_base: base/surge.conf
   #  surfboard_rule_base: base/surfboard.conf
   #  mellow_rule_base: base/mellow.conf
