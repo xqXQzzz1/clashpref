@@ -96,8 +96,8 @@ custom:
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownban.yaml",
-        group: "REJECT",
+        ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owndirect.yaml",
+        group: "DIRECT",
         interval: 86400,
       }
     - {
@@ -131,7 +131,7 @@ custom:
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml",
+        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
         group: "🆎 广告净化",
         interval: 86400,
       }
@@ -141,13 +141,8 @@ custom:
         interval: 86400,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml",
+        ruleset: "clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml",
         group: "📢 谷歌FCM",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml",
-        group: "🌍 国外媒体",
         interval: 86400,
       }
     - {
