@@ -1,13 +1,13 @@
 payload:
-  #DOMAIN-SUFFIX
-  #DOMAIN-KEYWORD
-  #DOMAIN
-  #GEOIP
-  #SRC-IP-CIDR
-  #IP-CIDR
-  #DST-PORT
-  #SRT-PORT
-  #PROCESS-NAME
+  # - DOMAIN-SUFFIX
+  # - DOMAIN-KEYWORD
+  # - DOMAIN
+  # - GEOIP
+  # - SRC-IP-CIDR
+  # - IP-CIDR
+  # - DST-PORT
+  # - SRT-PORT
+  # - PROCESS-NAME
   # classical
 
   - DOMAIN,mp3pro.xyz
@@ -27,3 +27,4 @@ payload:
   - DOMAIN-KEYWORD,rsshub
   - DOMAIN,freestyler.ws
   - DOMAIN,userstyles.org
+  - PROCESS-NAME,aria2c.exe
