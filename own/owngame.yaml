@@ -10,16 +10,18 @@ payload:
   # - PROCESS-NAME
   # classical
   
+  - DOMAIN,zjwwfudewhvj.jppp
+  
   # League of Legends (Japan) (with Riot Games)
-  - PROCESS-NAME,jpatch.exe
-  - PROCESS-NAME,RiotClientCrashHandler.exe
-  - PROCESS-NAME,RiotClientServices.exe
-  - PROCESS-NAME,RiotClientUx.exe
-  - PROCESS-NAME,RiotClientUxRender.exe
-  - PROCESS-NAME,BsSndRpt.exe
-  - PROCESS-NAME,LeagueClient.exe
-  - PROCESS-NAME,LeagueClientUx.exe
-  - PROCESS-NAME,LeagueClientUxRender.exe
-  - PROCESS-NAME,Uninstall League of Legends.exe
-  - PROCESS-NAME,League of Legends.exe
-  - PROCESS-NAME,LeagueCrashHandler.exe
+  # - PROCESS-NAME,jpatch.exe
+  # - PROCESS-NAME,RiotClientCrashHandler.exe
+  # - PROCESS-NAME,RiotClientServices.exe
+  # - PROCESS-NAME,RiotClientUx.exe
+  # - PROCESS-NAME,RiotClientUxRender.exe
+  # - PROCESS-NAME,BsSndRpt.exe
+  # - PROCESS-NAME,LeagueClient.exe
+  # - PROCESS-NAME,LeagueClientUx.exe
+  # - PROCESS-NAME,LeagueClientUxRender.exe
+  # - PROCESS-NAME,Uninstall League of Legends.exe
+  # - PROCESS-NAME,League of Legends.exe
+  # - PROCESS-NAME,LeagueCrashHandler.exe
