@@ -50,20 +50,20 @@ custom:
         type: select,
         rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
       }
-    - {
-        name: 🚀 节点选择,
-        type: select,
-        rule:
-          [
-            "♻️ 自动选择",
-            "DIRECT",
-            '^(?!(解锁节点|.*NetEase|0\d\.|.*[IE]\.)).*$',
-          ],
-        url: http://www.gstatic.com/generate_204,
-        interval: 2400,
-        tolerance: 100,
-        timeout: 5,
-      }
+    # - {
+    #     name: 🚀 节点选择,
+    #     type: select,
+    #     rule:
+    #       [
+    #         "♻️ 自动选择",
+    #         "DIRECT",
+    #         '^(?!(解锁节点|.*NetEase|0\d\.|.*[IE]\.)).*$',
+    #       ],
+    #     url: http://www.gstatic.com/generate_204,
+    #     interval: 2400,
+    #     tolerance: 100,
+    #     timeout: 5,
+    #   }
 
   rulesets:
     # ;Ruleset addresses, supports local files/URL
