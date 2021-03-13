@@ -12,3 +12,4 @@ payload:
   - DOMAIN,scholar.google.com
   - DOMAIN,scholar.googleusercontent.com
   - DOMAIN-KEYWORD,scholar
+  - DST-PORT,8096,DIRECT
