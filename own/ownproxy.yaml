@@ -6,7 +6,7 @@ payload:
   # - SRC-IP-CIDR
   # - IP-CIDR
   # - DST-PORT
-  # - SRT-PORT
+  # - SRC-PORT
   # - PROCESS-NAME
   # classical
 
