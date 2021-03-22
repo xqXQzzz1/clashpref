@@ -11,3 +11,4 @@ payload:
   # classical
   - PROCESS-NAME,csgo.exe
   - DOMAIN-KEYWORD,nfmovies
+  - PROCESS-NAME,OUTLOOK.EXE
