@@ -8,45 +8,45 @@ custom:
       # - {name: ssid group, type: ssid, rule: ['default_group', 'celluar=group0,ssid1=group1,ssid2=group2']}
       # - {import: snippets/groups.txt}
     - {
-        name: "🚀 节点选择",
+        name: 🚀 节点选择,
         type: select,
-        rule: ["♻️ 自动选择", "DIRECT", "^(?!(解锁节点|.*NetEase)).*$"],
+        rule: ["♻️ 自动选择", "DIRECT", "^(?!(解锁节点|.*NetEase)).*$"]
       }
     - {
-        name: "🌍 国外媒体",
+        name: 🌍 国外媒体,
         type: select,
         rule: ["♻️ 自动选择", "🚀 节点选择", "^(?!(解锁节点|.*NetEase)).*$"],
       }
     - {
-        name: "📲 社交软件",
+        name: 📲 社交软件,
         type: select,
         rule: ["🚀 节点选择", "♻️ 自动选择", "^(?!(解锁节点|.*NetEase)).*$"],
       }
-    - { name: "🐟 漏网之鱼", type: select, rule: ["🚀 节点选择", "DIRECT"] }
-    - { name: "🆎 广告净化", type: select, rule: ["DIRECT", "REJECT"] }
+    - { name: 🐟 漏网之鱼, type: select, rule: ["🚀 节点选择", "DIRECT"] }
+    - { name: 🆎 广告净化, type: select, rule: ["DIRECT", "REJECT"] }
     - {
-        name: "🎮 游戏论坛",
+        name: 🎮 游戏论坛,
         type: select,
         rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
       }
-    - { name: "🎮 游戏代理", type: select, rule: ["DIRECT", ".*IPLC.*"] }
+    - { name: 🎮 游戏代理, type: select, rule: ["DIRECT", ".*IPLC.*"] }
     - {
-        name: "🧱 砖块代理",
+        name: 🧱 砖块代理,
         type: select,
         rule: ["DIRECT", '^(?!(解锁节点|.*NetEase|0\d\.|.*I\.)).*$'],
       }
     - {
-        name: "Ⓜ️ 微软云盘",
+        name: Ⓜ️ 微软云盘,
         type: select,
         rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
       }
     - {
-        name: "🎶 网易音乐",
+        name: 🎶 网易音乐,
         type: select,
         rule: ["(解锁节点|NetEase).*", "DIRECT"],
       }
     - {
-        name: "📢 谷歌FCM",
+        name: 📢 谷歌FCM,
         type: select,
         rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
       }
