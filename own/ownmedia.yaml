@@ -11,9 +11,8 @@ payload:
   # classical
 
   - DOMAIN-KEYWORD,jable
-  - DOMAIN-SUFFIX,hwcdn.net
+  # - DOMAIN-SUFFIX,hwcdn.net
   - DOMAIN-SUFFIX,cdn77.org
   - DOMAIN-KEYWORD,phncdn
   - DOMAIN-SUFFIX,afreecatv.com
-  - DOMAIN-SUFFIX,xujia2018.com
-  - DOMAIN-SUFFIX,cableav.tv
+  # - DOMAIN-SUFFIX,cableav.tv
