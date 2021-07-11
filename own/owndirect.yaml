@@ -9,7 +9,6 @@ payload:
   # - SRC-PORT
   # - PROCESS-NAME
   # classical
-  - PROCESS-NAME,csgo.exe
   - DOMAIN-KEYWORD,nfmovies
   - PROCESS-NAME,OUTLOOK.EXE
   - DOMAIN-SUFFIX,steampowered.com
