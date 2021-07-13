@@ -12,6 +12,6 @@ payload:
   - DOMAIN-KEYWORD,nfmovies
   - PROCESS-NAME,OUTLOOK.EXE
   - PROCESS-NAME,csgo.EXE
-  - DOMAIN-SUFFIX,steampowered.com
+  # - DOMAIN-SUFFIX,steampowered.com
   - DOMAIN-SUFFIX,zxzj.me 
   - DOMAIN,blog.counter-strike.net
