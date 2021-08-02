@@ -11,7 +11,7 @@ payload:
   # classical
   - DOMAIN-KEYWORD,nfmovies
   - PROCESS-NAME,OUTLOOK.EXE
-  - PROCESS-NAME,csgo.EXE
+  - PROCESS-NAME,csgo.exe
   # - DOMAIN,api.steampowered.com
   - DOMAIN-SUFFIX,zxzj.me 
   - DOMAIN,blog.counter-strike.net
