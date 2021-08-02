@@ -11,7 +11,7 @@ payload:
   # classical
 
   - DOMAIN-KEYWORD,jable
-  # - DOMAIN-SUFFIX,hwcdn.net
+  - DOMAIN,api.steampowered.com
   - DOMAIN-SUFFIX,cdn77.org
   - DOMAIN-KEYWORD,phncdn
   - DOMAIN-SUFFIX,afreecatv.com
