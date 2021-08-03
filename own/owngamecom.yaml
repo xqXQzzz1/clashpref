@@ -13,4 +13,4 @@ payload:
   - PROCESS-NAME,steamwebhelper.exe
   - PROCESS-NAME,com.valvesoftware.android.steam.community
   - PROCESS-NAME,EpicWebHelper.exe
-  # - DOMAIN,api.steampowered.com
+  - DOMAIN,api.steampowered.com
