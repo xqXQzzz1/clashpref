@@ -13,4 +13,5 @@ payload:
   - PROCESS-NAME,OUTLOOK.EXE
   # - PROCESS-NAME,csgo.exe
   - DOMAIN-SUFFIX,zxzj.me 
-  # - DOMAIN,blog.counter-strike.net
+  - DOMAIN,blog.counter-strike.net
+  - DOMAIN,api.steampowered.com
