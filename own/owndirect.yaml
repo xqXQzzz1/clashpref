@@ -15,4 +15,4 @@ payload:
   - DOMAIN-SUFFIX,zxzj.me 
   - DOMAIN,blog.counter-strike.net
   - DOMAIN,api.steampowered.com
-  - DOMAIN,steamstore-a.akamaihd.net
+  # - DOMAIN,steamstore-a.akamaihd.net
