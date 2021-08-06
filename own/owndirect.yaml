@@ -21,3 +21,4 @@ payload:
   - DOMAIN,steamcommunity-a.akamaihd.net
   - DOMAIN,steamuserimages-a.akamaihd.net
   - DOMAIN,steambroadcast.akamaized.net
+  - DOMAIN,steamusercontent-a.akamaihd.net
