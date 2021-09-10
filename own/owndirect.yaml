@@ -16,9 +16,9 @@ payload:
 
   - DOMAIN,blog.counter-strike.net
   # - DOMAIN,api.steampowered.com
-  - DOMAIN,steamcdn-a.akamaihd.net
-  - DOMAIN,steamstore-a.akamaihd.net
-  - DOMAIN,steamcommunity-a.akamaihd.net
-  - DOMAIN,steamuserimages-a.akamaihd.net
-  - DOMAIN,steambroadcast.akamaized.net
-  - DOMAIN,steamusercontent-a.akamaihd.net
+  # - DOMAIN,steamcdn-a.akamaihd.net
+  # - DOMAIN,steamstore-a.akamaihd.net
+  # - DOMAIN,steamcommunity-a.akamaihd.net
+  # - DOMAIN,steamuserimages-a.akamaihd.net
+  # - DOMAIN,steambroadcast.akamaized.net
+  # - DOMAIN,steamusercontent-a.akamaihd.net
