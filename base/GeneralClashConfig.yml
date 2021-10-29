@@ -160,7 +160,7 @@ dns:
     - "stun.*.*"
     - "stun.*.*.*"
   nameserver:
-    # - 218.2.135.1
+    - dhcp://en0 # dns from dhcp
     - 223.5.5.5 # 阿里DNS
     # - 180.76.76.76 # 百度DNS
     - 119.29.29.29 # 腾讯DNS
