@@ -74,7 +74,7 @@ dns:
   # default-nameserver:
   #   - 114.114.114.114
   #   - 223.5.5.5
-  enhanced-mode: fake-ip # 模式：redir-host或fake-ip
+  enhanced-mode: redir-host # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
     # 以下域名列表参考自 vernesong/OpenClash 项目，并由 Hackl0us 整理补充
