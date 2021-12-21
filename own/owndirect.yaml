@@ -13,7 +13,7 @@ payload:
   - PROCESS-NAME,OUTLOOK.EXE
   - PROCESS-NAME,csgo.exe
   - DOMAIN-SUFFIX,zxzj.me 
-
+  - DOMAIN,download.epicgames.com
   - DOMAIN,blog.counter-strike.net
   # - DOMAIN,api.steampowered.com
   # - DOMAIN,steamcdn-a.akamaihd.net
