@@ -56,8 +56,8 @@ profile:
   store-fake-ip: true
 
 # 实验性功能
-# experimental:
-#   ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
+experimental:
+  ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
 # interface-name: clash-tap # outbound interface name
 
 # 本地 SOCKS5 / HTTP(S) 服务认证
@@ -185,7 +185,7 @@ dns:
     # - 8.8.8.8 # 谷歌DNS
     # - tls://dns.rubyfish.cn:853
     # - tls://1.0.0.1:853
-    # - tls://dns.google:853
+    - tls://dns.google:853
     # - https://dns.rubyfish.cn/dns-query
     # - https://cloudflare-dns.com/dns-query
     # - https://dns.google/dns-query
