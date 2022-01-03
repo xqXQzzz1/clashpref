@@ -15,6 +15,8 @@ payload:
   - DOMAIN-SUFFIX,zxzj.me 
   - DOMAIN,download.epicgames.com
   - DOMAIN,blog.counter-strike.net
+  - DOMAIN,t-rex.tzflie.com
+  - DOMAIN,bwl87.com
   # - DOMAIN,api.steampowered.com
   # - DOMAIN,steamcdn-a.akamaihd.net
   # - DOMAIN,steamstore-a.akamaihd.net
