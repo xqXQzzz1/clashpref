@@ -30,3 +30,4 @@ payload:
   - PROCESS-NAME,aria2c.exe
   - DOMAIN,vscode-sync.trafficmanager.net
   - IP-CIDR,34.241.115.0/24
+  - IP-CIDR,54.228.0.0/16
