@@ -10,6 +10,6 @@ payload:
   # - PROCESS-NAME
   # classical
 
-  - PROCESS-NAME,steamwebhelper.exe
+  # - PROCESS-NAME,steamwebhelper.exe
   - PROCESS-NAME,com.valvesoftware.android.steam.community
   # - PROCESS-NAME,EpicWebHelper.exe
