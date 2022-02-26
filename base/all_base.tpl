@@ -171,10 +171,6 @@ dns:
 #   DoH: 以 https:// 开头的 DNS 服务器。拥有更好的伪装性，且几乎不可能被运营商或网络管理封锁，但查询效率和安全性可能略低。
 #   DoT: 以 tls:// 开头的 DNS 服务器。拥有更高的安全性和查询效率，但端口有可能被管制或封锁。
 #   若要了解更多关于 DoH/DoT 相关技术，请自行查阅规范文档。
-
-{% endif %}
-
-
 {% if default(request.tun, "fasle") == "true" %}
 tun:
   enable: true
@@ -189,6 +185,10 @@ tun:
   # It is recommended to use `interface-name`
   auto-detect-interface: true # auto detect interface, conflict with `interface-name`
 {% endif %}
+{% endif %}
+
+
+
 
 {% if default(request.clashnewfiled, "true") == "true" %}
 proxies: ~
