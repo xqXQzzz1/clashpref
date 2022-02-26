@@ -174,7 +174,7 @@ dns:
 {% if default(request.tun, "fasle") == "true" %}
 tun:
   enable: true
-{% if default(request.deviceinfo, "windows") == windows %}
+{% if default(request.deviceinfo, "windows") == "windows" %}
   stack: gvisor #system # or gvisor
 {% else %}
   stack: system #system # or gvisor
@@ -185,6 +185,7 @@ tun:
   # It is recommended to use `interface-name`
   auto-detect-interface: true # auto detect interface, conflict with `interface-name`
 {% endif %}
+
 {% endif %}
 
 
