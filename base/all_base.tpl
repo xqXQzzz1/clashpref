@@ -8,6 +8,7 @@ mixed-port: {{ local.clash.mixed_port }}
 allow-lan: {{ local.clash.allow_lan }}
 mode: rule
 log-level: {{ default(request.loglevel , "debug") }}
+ipv6: true
 external-controller: 127.0.0.1:9090
 profile:
   # Store the `select` results in $HOME/.config/clash/.cache
