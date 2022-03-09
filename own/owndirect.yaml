@@ -19,6 +19,7 @@ payload:
   - DOMAIN,bwl87.com
   - DOMAIN,jx.ak1080.me
   - DOMAIN,pypi.tuna.tsinghua.edu.cn
+  - DOMAIN-SUFFIX,rutracker
   # - DOMAIN,api.steampowered.com
   # - DOMAIN,steamcdn-a.akamaihd.net
   # - DOMAIN,steamstore-a.akamaihd.net
