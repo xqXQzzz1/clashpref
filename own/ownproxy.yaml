@@ -34,4 +34,4 @@ payload:
   - IP-CIDR,20.205.243.160/29
   - IP-CIDR,54.78.134.111/32
   - DOMAIN,xqxsub.herokuapp.com
-  - DOMAINM,gpu.me
+  - DOMAIN,gpu.me
