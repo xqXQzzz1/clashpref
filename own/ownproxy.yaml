@@ -35,3 +35,4 @@ payload:
   - IP-CIDR,54.78.134.111/32
   - DOMAIN,xqxsub.herokuapp.com
   - DOMAIN,gpu.me
+  - DOMAIN-SUFFIX,mumuceo.com
