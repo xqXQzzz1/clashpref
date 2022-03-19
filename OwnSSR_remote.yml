@@ -12,10 +12,10 @@ custom:
     - {
         name: ♻️ 自动选择,
         type: url-test,
-        rule: ["♻️ 自动选择", "DIRECT", "^(?!(解锁节点|.*NetEase)).*$"],
+        rule: ["♻️ 自动选择", "DIRECT", "^(?!(.*IPLC)).*$"],
         url: http://www.gstatic.com/generate_204,
         interval: 43200,
-        timeout: 50,
+        timeout: 60,
         tolerance: 100,
       }
     - {
