@@ -308,7 +308,7 @@ custom:
       '^.*解锁.*\(本地\).*$',
       "^.*(收费请举报).*$",
     ]
-  template_args:
+  template:
     #     ; variables in the local scope
     # ; 从 配置文件 中获取，判断前缀为 global
     # ; 从 外部配置 中获取，判断前缀为 local
