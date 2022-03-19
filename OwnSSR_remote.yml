@@ -131,8 +131,8 @@ custom:
     # - {ruleset: 'clash-classic:https://raw.staticdn.net/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml', group: 'DIRECT', interval: 86400}
     # - {import: snippets/groups_forcerule.txt}
     - {
-        ruleset: clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/owngame.yaml,
-        group: 🎮 游戏代理,
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/owngame.yaml",
+        group: "🎮 游戏代理",
         interval: 43200,
       }
     - {
