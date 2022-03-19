@@ -1,69 +1,142 @@
 custom:
+  enable_rule_generator: true
+  overwrite_original_rules: true
   proxy_groups:
-      # - {name: UrlTest, type: url-test, rule: ['.*'], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5}
-      # - {name: Proxy, type: select, rule: ['.*']}
-      # - {name: group1, type: select, rule: ['!!GROUPID=0']}
-      # - {name: v2ray, type: select, rule: ['!!GROUP=V2RayProvider']}
-      # - {import: snippets/groups_forcerule.txt}
-      # - {name: ssid group, type: ssid, rule: ['default_group', 'celluar=group0,ssid1=group1,ssid2=group2']}
-      # - {import: snippets/groups.txt}
+    # - {name: UrlTest, type: url-test, rule: ['.*'], url: http://www.gstatic.com/generate_204, interval: 300, tolerance: 100, timeout: 5}
+    # - {name: Proxy, type: select, rule: ['.*']}
+    # - {name: group1, type: select, rule: ['!!GROUPID=0']}
+    # - {name: v2ray, type: select, rule: ['!!GROUP=V2RayProvider']}
+    # - {import: snippets/groups_forcerule.txt}
+    # - {name: ssid group, type: ssid, rule: ['default_group', 'celluar=group0,ssid1=group1,ssid2=group2']}
+    # - {import: snippets/groups.txt}
+    - {
+        name: ♻️ 自动选择,
+        type: url-test,
+        rule: ["♻️ 自动选择", "DIRECT", "^(?!(解锁节点|.*NetEase)).*$"],
+        url: http://www.gstatic.com/generate_204,
+        interval: 300,
+        tolerance: 100,
+        timeout: 5,
+      }
     - {
         name: 🚀 节点选择,
         type: select,
-        rule: ["♻️ 自动选择", "DIRECT", "^(?!(解锁节点|.*NetEase)).*$"]
+        rule: ["♻️ 自动选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC)).*$"],
       }
     - {
         name: 🌍 国外媒体,
         type: select,
-        rule: ["♻️ 自动选择", "🚀 节点选择", "^(?!(解锁节点|.*NetEase)).*$"],
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
       }
     - {
         name: 📲 社交软件,
         type: select,
-        rule: ["🚀 节点选择", "♻️ 自动选择", "^(?!(解锁节点|.*NetEase)).*$"],
-      }
-    - { name: 🐟 漏网之鱼, type: select, rule: ["🚀 节点选择", "DIRECT"] }
-    - { name: 🆎 广告净化, type: select, rule: ["DIRECT", "REJECT"] }
-    - {
-        name: 🎮 游戏论坛,
-        type: select,
-        rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
-      }
-    - { name: 🎮 游戏代理, type: select, rule: ["DIRECT", ".*IPLC.*"] }
-    - {
-        name: 🧱 砖块代理,
-        type: select,
-        rule: ["DIRECT", '^(?!(解锁节点|.*NetEase|0\d\.|.*I\.)).*$'],
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
       }
     - {
-        name: Ⓜ️ 微软云盘,
+        name: 🐟 漏网之鱼,
         type: select,
-        rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
-      }
-    - {
-        name: 🎶 网易音乐,
-        type: select,
-        rule: ["(解锁节点|NetEase).*", "DIRECT"],
-      }
-    - {
-        name: 📢 谷歌FCM,
-        type: select,
-        rule: ["🚀 节点选择", "♻️ 自动选择", "DIRECT"],
+        rule: ["DIRECT", "🚀 节点选择", ".*IPLC.*", "^(?!(.*IPLC)).*$"],
       }
     # - {
-    #     name: 🚀 节点选择,
+    #     name: 🆎 广告净化,
     #     type: select,
     #     rule:
     #       [
     #         "♻️ 自动选择",
+    #         "🚀 节点选择",
     #         "DIRECT",
-    #         '^(?!(解锁节点|.*NetEase|0\d\.|.*[IE]\.)).*$',
+    #         ".*IPLC.*",
+    #         "^(?!(.*IPLC)).*$",
     #       ],
-    #     url: http://www.gstatic.com/generate_204,
-    #     interval: 2400,
-    #     tolerance: 100,
-    #     timeout: 5,
     #   }
+    # - {
+    #     name: 🔒 隐私防护,
+    #     type: select,
+    #     rule:
+    #       [
+    #         "♻️ 自动选择",
+    #         "🚀 节点选择",
+    #         "DIRECT",
+    #         ".*IPLC.*",
+    #         "^(?!(.*IPLC)).*$",
+    #       ],
+    #   }
+    - {
+        name: 🎮 游戏论坛,
+        type: select,
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
+      }
+    - { name: 🎮 游戏代理, type: select, rule: ["DIRECT", ".*IPLC.*"] }
+    - {
+        name: 🎮 游戏论坛,
+        type: select,
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
+      }
+    - {
+        name: 🧱 砖块代理,
+        type: select,
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
+      }
+    - {
+        name: Ⓜ️ 微软云盘,
+        type: select,
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
+      }
+    - {
+        name: 📢 谷歌FCM,
+        type: select,
+        rule:
+          [
+            "♻️ 自动选择",
+            "🚀 节点选择",
+            "DIRECT",
+            ".*IPLC.*",
+            "^(?!(.*IPLC)).*$",
+          ],
+      }
 
   rulesets:
     # ;Ruleset addresses, supports local files/URL
@@ -81,139 +154,140 @@ custom:
     # - {ruleset: 'clash-classic:https://raw.staticdn.net/DivineEngine/Profiles/master/Clash/RuleSet/China.yaml', group: 'DIRECT', interval: 86400}
     # - {import: snippets/groups_forcerule.txt}
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml",
-        group: "DIRECT",
-        interval: 86400,
-      }
-
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/ownban.yaml",
-        group: "REJECT",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/owndirect.yaml",
-        group: "DIRECT",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/ownproxy.yaml",
-        group: "🚀 节点选择",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/own.yaml",
-        group: "🧱 砖块代理",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/owngame.yaml",
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/owngame.yaml",
         group: "🎮 游戏代理",
-        interval: 86400,
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/xqXQzzz1/clashpref/main/own/owngamecom.yaml",
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/owngamecom.yaml",
         group: "🎮 游戏论坛",
-        interval: 86400,
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/own.yaml",
+        group: "🧱 砖块代理",
+        interval: 43200,
+      }
+    - {
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/ownban.yaml",
+        group: "REJECT",
+        interval: 43200,
+      }
+    - {
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/owndirect.yaml",
         group: "DIRECT",
-        interval: 86400,
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/NetEaseMusic/NetEaseMusic.yaml",
-        group: "🎶 网易音乐",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
-        group: "🆎 广告净化",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-domain:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml",
-        group: "🆎 广告净化",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml",
-        group: "📢 谷歌FCM",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml",
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/ownmedia.yaml",
         group: "🌍 国外媒体",
-        interval: 86400,
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml",
-        group: "🌍 国外媒体",
-        interval: 86400,
+        ruleset: "clash-classic:https://raw.fastgit.org/xqXQzzz1/clashpref/main/own/ownproxy.yaml",
+        group: "🚀 节点选择",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
-        group: "📲 社交软件",
-        interval: 86400,
-      }
-    - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
-        group: "📲 社交软件",
-        interval: 86400,
+        ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml",
+        group: "DIRECT",
+        interval: 43200,
       }
     # - {
-    #     ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
-    #     group: "📲 社交软件",
-    #     interval: 86400,
+    #     ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
+    #     group: "DIRECT",
+    #     interval: 43200,
+    #   }
+    # - {
+    #     ruleset: "clash-classic:https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml",
+    #     group: "🎮 游戏论坛",
+    #     interval: 43200,
     #   }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
-        group: "📲 社交软件",
-        interval: 86400,
+        ruleset: "https://raw.githubusercontent.com/AoEiuV020/SubConfig/main/steam-direct.list",
+        group: "DIRECT",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml",
+        ruleset: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list",
+        group: "DIRECT",
+        interval: 43200,
+      }
+    - {
+        ruleset: "https://raw.githubusercontent.com/AoEiuV020/SubConfig/main/steam-proxy.list",
+        group: "🎮 游戏论坛",
+        interval: 43200,
+      }
+    - {
+        ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml",
         group: "Ⓜ️ 微软云盘",
-        interval: 86400,
+        interval: 43200,
+      }
+    # - {
+    #     ruleset: "clash-domain:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml",
+    #     group: "🔒 隐私防护",
+    #     interval: 43200
+    #   }
+    # - {
+    #     ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
+    #     group: "🆎 广告净化",
+    #     interval: 43200
+    #   }
+    # - {
+    #     ruleset: "clash-domain:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml",
+    #     group: "🆎 广告净化",
+    #     interval: 43200
+    # }
+    - {
+        ruleset: "clash-classic:https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml",
+        group: "📢 谷歌FCM",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-ipcidr:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs.yaml",
-        group: "DIRECT",
-        interval: 86400,
+        ruleset: "clash-classic:https://raw.fastgit.org/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml",
+        group: "🌍 国外媒体",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTest/ChinaTest.yaml",
-        group: "DIRECT",
-        interval: 86400,
+        ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml",
+        group: "🌍 国外媒体",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-domain:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaTest/ChinaTest_Domain.yaml",
-        group: "DIRECT",
-        interval: 86400,
+        ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
+        group: "📲 社交软件",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/WhiteList/WhiteList.yaml",
-        group: "DIRECT",
-        interval: 86400,
+        ruleset: "https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml",
+        group: "📲 社交软件",
+        interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml",
+        ruleset: "https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml",
+        group: "📲 社交软件",
+        interval: 43200,
+      }
+    - {
+        ruleset: "https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml",
+        group: "📲 社交软件",
+        interval: 43200,
+      }
+    - {
+        ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical.yaml",
         group: "🚀 节点选择",
-        interval: 86400,
+        interval: 43200,
       }
     - {
-        ruleset: "clash-domain:https://raw.staticdn.net/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml",
-        group: "🚀 节点选择",
-        interval: 86400,
+        ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml",
+        group: "DIRECT",
+        interval: 43200,
       }
     - { rule: "GEOIP,CN", group: "DIRECT" }
     - { rule: "MATCH", group: "🐟 漏网之鱼" }
 
-  enable_rule_generator: true
-  overwrite_original_rules: true
-
-  clash_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/GeneralClashConfig.yml
-  #  surge_rule_base: base/surge.conf
+  clash_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/all_base.tpl
+  #  surge_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/surge.conf
   #  surfboard_rule_base: base/surfboard.conf
   #  mellow_rule_base: base/mellow.conf
   #  quan_rule_base: base/quan.conf
@@ -228,7 +302,12 @@ custom:
   #  - {import: snippets/emoji.txt}
 
   #  include_remarks: []
-  exclude_remarks: ['^(?=(0\d\.|.*[IE]\.)).*$']
+  exclude_remarks:
+    [
+      '^(?=(\d\d\.|(I\+?|E\+?|G\+?|H\+?)\.)).*$',
+      '^.*解锁.*\(本地\).*$',
+      "^.*(收费请举报).*$",
+    ]
   template_args:
     #     ; variables in the local scope
     # ; 从 配置文件 中获取，判断前缀为 global
