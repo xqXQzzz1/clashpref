@@ -5,7 +5,9 @@
 {% if request.target == "clash" or request.target == "clashr" %}
 
 mixed-port: 7890
-allow-lan: {{ local.clash.allow_lan }}
+allow-lan: false
+# mixed-port: {{ local.clash.mixed_port }}
+# allow-lan: {{ local.clash.allow_lan }}
 mode: rule
 log-level: {{ default(request.loglevel , "debug") }}
 ipv6: true
