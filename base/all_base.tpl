@@ -4,7 +4,7 @@
 # 从 URL 链接中获取，判断前缀为 request，例如 http://127.0.0.1:25500/sub?target=clash&url=www.xxx.com&clash.dns=1
 {% if request.target == "clash" or request.target == "clashr" %}
 
-mixed-port: {{ local.clash.mixed_port }}
+mixed-port: 7890
 allow-lan: {{ local.clash.allow_lan }}
 mode: rule
 log-level: {{ default(request.loglevel , "debug") }}
