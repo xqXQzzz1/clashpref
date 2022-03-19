@@ -3,10 +3,10 @@ custom:
   overwrite_original_rules: false
 
   proxy_groups:
-  - {import: snippets/groups_forcerule.txt}
+    - { import: snippets/groups_forcerule.txt }
 
-#  rulesets:
-#  - {import: snippets/ruleset_remote.txt}
+  #  rulesets:
+  #  - {import: snippets/ruleset_remote.txt}
 
   clash_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/all_base.tpl
 #  surge_rule_base: base/surge.conf
@@ -25,5 +25,6 @@ custom:
 
 #  include_remarks: []
 #  exclude_remarks: []
-#  template_args:
-#  - {key: clash.dns.port, value: 5353}
+template_args:
+  - { key: clash.mixed_port, value: 7890 }
+  - { key: clash.allow_lan, value: false }
