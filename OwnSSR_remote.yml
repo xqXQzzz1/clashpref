@@ -52,30 +52,8 @@ custom:
         type: select,
         rule: ["DIRECT", "🚀 节点选择", ".*IPLC.*", "^(?!(.*IPLC)).*$"],
       }
-    # - {
-    #     name: 🆎 广告净化,
-    #     type: select,
-    #     rule:
-    #       [
-    #         "♻️ 自动选择",
-    #         "🚀 节点选择",
-    #         "DIRECT",
-    #         ".*IPLC.*",
-    #         "^(?!(.*IPLC)).*$",
-    #       ],
-    #   }
-    # - {
-    #     name: 🔒 隐私防护,
-    #     type: select,
-    #     rule:
-    #       [
-    #         "♻️ 自动选择",
-    #         "🚀 节点选择",
-    #         "DIRECT",
-    #         ".*IPLC.*",
-    #         "^(?!(.*IPLC)).*$",
-    #       ],
-    #   }
+    # - { name: 🆎 广告净化, type: select, rule: ["♻️ 自动选择", "🚀 节点选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC)).*$", ] }
+    # - { name: 🔒 隐私防护, type: select, rule: ["♻️ 自动选择", "🚀 节点选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC)).*$", ] }
     - {
         name: 🎮 游戏论坛,
         type: select,
@@ -137,7 +115,6 @@ custom:
             "^(?!(.*IPLC)).*$",
           ],
       }
-
   rulesets:
     # ;Ruleset addresses, supports local files/URL
     # ;Format: Group name,[type:]URL[,interval]
@@ -193,16 +170,8 @@ custom:
         group: "DIRECT",
         interval: 43200,
       }
-    # - {
-    #     ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
-    #     group: "DIRECT",
-    #     interval: 43200,
-    #   }
-    # - {
-    #     ruleset: "clash-classic:https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml",
-    #     group: "🎮 游戏论坛",
-    #     interval: 43200,
-    #   }
+    # - { ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml", group: "DIRECT", interval: 43200}
+    # - { ruleset: "clash-classic:https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml", group: "🎮 游戏论坛", interval: 43200}
     - {
         ruleset: "https://raw.githubusercontent.com/AoEiuV020/SubConfig/main/steam-direct.list",
         group: "DIRECT",
@@ -223,21 +192,10 @@ custom:
         group: "Ⓜ️ 微软云盘",
         interval: 43200,
       }
-    # - {
-    #     ruleset: "clash-domain:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml",
-    #     group: "🔒 隐私防护",
-    #     interval: 43200
-    #   }
-    # - {
-    #     ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
-    #     group: "🆎 广告净化",
-    #     interval: 43200
-    #   }
-    # - {
-    #     ruleset: "clash-domain:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml",
-    #     group: "🆎 广告净化",
-    #     interval: 43200
-    # }
+    # - { ruleset: "clash-domain:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml", group: "🔒 隐私防护", interval: 43200}
+    # - { ruleset: "clash-classic:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml", group: "🆎 广告净化", interval: 43200} 
+    # - { ruleset: "clash-domain:https://raw.fastgit.org/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml", group: "🆎 广告净化", interval: 43200}
+
     - {
         ruleset: "clash-classic:https://raw.githubusercontents.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml",
         group: "📢 谷歌FCM",
