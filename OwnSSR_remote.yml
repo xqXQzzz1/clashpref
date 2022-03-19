@@ -15,8 +15,8 @@ custom:
         rule: ["♻️ 自动选择", "DIRECT", "^(?!(解锁节点|.*NetEase)).*$"],
         url: http://www.gstatic.com/generate_204,
         interval: 43200,
-        tolerance: 100,
         timeout: 50,
+        tolerance: 100,
       }
     - {
         name: 🚀 节点选择,
