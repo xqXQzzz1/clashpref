@@ -14,9 +14,11 @@ custom:
         type: url-test,
         rule: ["^(?!(.*IPLC)).*$"],
         url: http://www.gstatic.com/generate_204,
-        interval: 43200,
-        timeout: 99, 
+        interval: 3600,
+        timeout: 99,
         tolerance: 100,
+        lazy: false,
+        disable-udp: false,
       }
     - {
         name: 🚀 节点选择,
@@ -94,22 +96,12 @@ custom:
     - {
         name: Ⓜ️ 微软云盘,
         type: select,
-        rule:
-          [
-            "[]♻️ 自动选择",
-            "[]🚀 节点选择",
-            "[]DIRECT",
-          ],
+        rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "[]DIRECT"],
       }
     - {
         name: 📢 谷歌FCM,
         type: select,
-        rule:
-          [
-            "[]♻️ 自动选择",
-            "[]🚀 节点选择",
-            "[]DIRECT",
-          ],
+        rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "[]DIRECT"],
       }
   rulesets:
     # ;where 'type' supports the following value: surge, quanx, clash-domain, clash-ipcidr, clash-classic
