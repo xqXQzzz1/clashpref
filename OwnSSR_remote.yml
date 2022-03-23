@@ -17,7 +17,7 @@ custom:
         interval: 3600,
         timeout: 99,
         tolerance: 100,
-        lazy: true,
+        lazy: false,
         disable-udp: false,
       }
     - {
