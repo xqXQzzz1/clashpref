@@ -37,3 +37,4 @@ payload:
   - DOMAIN,gpu.me
   - DOMAIN-SUFFIX,mumuceo.com
   - DOMAIN,rectify11.weebly.com
+  - PROCESS-NAME,tor.exe
