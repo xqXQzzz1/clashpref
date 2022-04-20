@@ -167,6 +167,11 @@ custom:
         interval: 43200,
       }
     - {
+        ruleset: "clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml",
+        group: "🎮 游戏论坛",
+        interval: 43200,
+      }
+    - {
         ruleset: "clash-classic:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml",
         group: "Ⓜ️ 微软云盘",
         interval: 43200,
