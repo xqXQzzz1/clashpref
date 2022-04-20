@@ -167,7 +167,7 @@ custom:
         interval: 43200,
       }
     - {
-        ruleset: "clash-classic:https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Steam.yaml",
+        ruleset: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list",
         group: "🎮 游戏论坛",
         interval: 43200,
       }
