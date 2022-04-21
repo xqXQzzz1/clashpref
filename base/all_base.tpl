@@ -138,7 +138,7 @@ dns:
     # - https://doh.360.cn/dns-query # 360 DoH DNS
   fallback:
     # - 1.1.1.1
-    # - 8.8.8.8 # 谷歌DNS
+    - 8.8.8.8 # 谷歌DNS
     # - tls://dns.rubyfish.cn:853
     # - tls://1.0.0.1:853
     - tls://dns.google:853
