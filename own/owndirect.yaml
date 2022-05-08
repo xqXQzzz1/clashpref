@@ -20,7 +20,7 @@ payload:
   - DOMAIN,jx.ak1080.me
   - DOMAIN,pypi.tuna.tsinghua.edu.cn
   - DOMAIN-SUFFIX,rutracker
-  - DOMAIN-SUFFIX,bing.com
+  # - DOMAIN-SUFFIX,bing.com
   # - DOMAIN,api.steampowered.com
   # - DOMAIN,steamcdn-a.akamaihd.net
   # - DOMAIN,steamstore-a.akamaihd.net
