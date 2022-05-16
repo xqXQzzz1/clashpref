@@ -29,10 +29,10 @@ payload:
   - DOMAIN,userstyles.org
   - PROCESS-NAME,aria2c.exe
   - DOMAIN,vscode-sync.trafficmanager.net
-  - IP-CIDR,34.241.115.0/24
-  - IP-CIDR,54.228.0.0/16
-  - IP-CIDR,20.205.243.160/29
-  - IP-CIDR,54.78.134.111/32
+  - IP-CIDR,34.241.115.0/24,no-resolve
+  - IP-CIDR,54.228.0.0/16,no-resolve
+  - IP-CIDR,20.205.243.160/29,no-resolve
+  - IP-CIDR,54.78.134.111/32,no-resolve
   - DOMAIN,xqxsub.herokuapp.com
   - DOMAIN,gpu.me
   - DOMAIN-SUFFIX,mumuceo.com
