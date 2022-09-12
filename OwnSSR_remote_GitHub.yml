@@ -12,7 +12,7 @@ custom:
     - {
         name: ♻️ 自动选择,
         type: url-test,
-        rule: ["^(?!(.*IPLC)).*$"],
+        rule: ["^(?!(.*IPLC|游戏节点)).*$"],
         url: http://www.gstatic.com/generate_204,
         interval: 3600,
         timeout: 99,
@@ -23,7 +23,7 @@ custom:
     - {
         name: 🚀 节点选择,
         type: select,
-        rule: ["[]♻️ 自动选择", "[]DIRECT", ".*IPLC.*", "^(?!(.*IPLC)).*$"],
+        rule: ["[]♻️ 自动选择", "[]DIRECT", ".*IPLC.*", "^(?!(.*IPLC|游戏节点)).*$"],
       }
     - {
         name: 🌍 国外媒体,
@@ -34,7 +34,7 @@ custom:
             "[]🚀 节点选择",
             "[]DIRECT",
             ".*IPLC.*",
-            "^(?!(.*IPLC)).*$",
+            "^(?!(.*IPLC|游戏节点)).*$",
           ],
       }
     - {
@@ -46,16 +46,16 @@ custom:
             "[]🚀 节点选择",
             "[]DIRECT",
             ".*IPLC.*",
-            "^(?!(.*IPLC)).*$",
+            "^(?!(.*IPLC|游戏节点)).*$",
           ],
       }
     - {
         name: 🐟 漏网之鱼,
         type: select,
-        rule: ["[]DIRECT", "[]🚀 节点选择", ".*IPLC.*", "^(?!(.*IPLC)).*$"],
+        rule: ["[]DIRECT", "[]🚀 节点选择", ".*IPLC.*", "^(?!(.*IPLC|游戏节点)).*$"],
       }
-    # - { name: 🆎 广告净化, type: select, rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC)).*$", ] }
-    # - { name: 🔒 隐私防护, type: select, rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC)).*$", ] }
+    # - { name: 🆎 广告净化, type: select, rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC|游戏节点)).*$", ] }
+    # - { name: 🔒 隐私防护, type: select, rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "DIRECT", ".*IPLC.*", "^(?!(.*IPLC|游戏节点)).*$", ] }
     - {
         name: 🎮 游戏论坛,
         type: select,
@@ -65,10 +65,10 @@ custom:
             "[]🚀 节点选择",
             "[]DIRECT",
             ".*IPLC.*",
-            "^(?!(.*IPLC)).*$",
+            "^(?!(.*IPLC|游戏节点)).*$",
           ],
       }
-    - { name: 🎮 游戏代理, type: select, rule: ["[]DIRECT", ".*IPLC.*"] }
+    - { name: 🎮 游戏代理, type: select, rule: ["[]DIRECT", ".*IPLC.*", ".*游戏节点.*"] }
     - {
         name: 🎮 游戏论坛,
         type: select,
@@ -78,7 +78,7 @@ custom:
             "[]🚀 节点选择",
             "[]DIRECT",
             ".*IPLC.*",
-            "^(?!(.*IPLC)).*$",
+            "^(?!(.*IPLC|游戏节点)).*$",
           ],
       }
     - {
@@ -90,7 +90,7 @@ custom:
             "[]🚀 节点选择",
             "[]DIRECT",
             ".*IPLC.*",
-            "^(?!(.*IPLC)).*$",
+            "^(?!(.*IPLC|游戏节点)).*$",
           ],
       }
     - {
