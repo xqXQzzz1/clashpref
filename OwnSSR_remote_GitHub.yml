@@ -274,11 +274,11 @@ custom:
       '^.*解锁.*\(本地\).*$',
       "^.*(收费请举报).*$",
     ]
-template_args:
+  template_args:
   #     ; variables in the local scope
   # ; 从 配置文件 中获取，判断前缀为 global
   # ; 从 外部配置 中获取，判断前缀为 local
   # ; 从 URL 链接中获取，判断前缀为 request，例如 http://127.0.0.1:25500/sub?target=clash&url=www.xxx.com&clash.dns=1
-  - { key: clash.mixed_port, value: 7890 }
-  - { key: clash.allow_lan, value: false }
-  - { key: clash.log_level, value: info }
+    - { key: clash.mixed_port, value: 7890 }
+    - { key: clash.allow_lan, value: false }
+    - { key: clash.log_level, value: info }
