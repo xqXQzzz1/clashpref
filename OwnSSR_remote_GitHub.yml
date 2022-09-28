@@ -273,6 +273,7 @@ custom:
       '^(?=(\d\d\.|(A|I\+?|E\+?|H\+?)\.)).*$',
       '^.*解锁.*\(本地\).*$',
       "^.*(收费请举报).*$",
+      "^.*(乌克兰1).*$",
     ]
 template_args:
   #     ; variables in the local scope
