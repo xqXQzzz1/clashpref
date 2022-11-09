@@ -138,15 +138,15 @@ dns:
     # - https://doh.360.cn/dns-query # 360 DoH DNS
   fallback:
     # - 1.1.1.1
-    - 8.8.8.8 # 谷歌DNS
+    # - 8.8.8.8 # 谷歌DNS
     # - tls://dns.rubyfish.cn:853
     # - tls://1.0.0.1:853
     - tls://dns.google:853
-    # - https://dns.rubyfish.cn/dns-query
+    - https://dns.rubyfish.cn/dns-query
     # - https://cloudflare-dns.com/dns-query
     # - https://dns.google/dns-query
     - https://i.passcloud.xyz/dns-query
-    - https://sm2.doh.pub/dns-query #腾讯
+    # - https://sm2.doh.pub/dns-query #腾讯
   fallback-filter:
     geoip: true # 默认
     geoip-code: CN
