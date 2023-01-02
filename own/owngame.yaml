@@ -9,9 +9,9 @@ payload:
   # - SRC-PORT
   # - PROCESS-NAME
   # classical
-  
-  - DOMAIN,zjwwfudewhvj.jpppppppppp
-  
+
+  # - DOMAIN,zjwwfudewhvj.jpppppppppp
+  - DOMAIN-SUFFIX,gaggle.fun # Goose Goose Duck代理
   # League of Legends (Japan) (with Riot Games)
   # - PROCESS-NAME,jpatch.exe
   # - PROCESS-NAME,RiotClientCrashHandler.exe
