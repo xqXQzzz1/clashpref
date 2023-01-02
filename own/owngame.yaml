@@ -11,7 +11,8 @@ payload:
   # classical
 
   # - DOMAIN,zjwwfudewhvj.jpppppppppp
-  - DOMAIN-SUFFIX,gaggle.fun # Goose Goose Duck代理
+  # Goose Goose Duck代理
+  - DOMAIN-SUFFIX,gaggle.fun
   # League of Legends (Japan) (with Riot Games)
   # - PROCESS-NAME,jpatch.exe
   # - PROCESS-NAME,RiotClientCrashHandler.exe
