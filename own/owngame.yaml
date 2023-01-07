@@ -17,6 +17,7 @@ payload:
   - PROCESS-NAME,Goose Goose Duck.exe
   - PROCESS-NAME,UnityCrashHandler64.exe
   - DOMAIN-SUFFIX,gaggle.fun
+  - DOMAIN us-central1-gaggle-staging.cloudfunctions.net
 
   # League of Legends (Japan) (with Riot Games)
   # - PROCESS-NAME,jpatch.exe
