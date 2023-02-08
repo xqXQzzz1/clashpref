@@ -143,9 +143,10 @@ dns:
     # - tls://1.0.0.1:853
     - tls://dns.google:853
     - https://dns.rubyfish.cn/dns-query
+    - https://cn-east.iqiqzz.com/dns-query
     # - https://cloudflare-dns.com/dns-query
     # - https://dns.google/dns-query
-    - https://i.passcloud.xyz/dns-query
+    # - https://i.passcloud.xyz/dns-query
     # - https://sm2.doh.pub/dns-query #腾讯
   fallback-filter:
     geoip: true # 默认
