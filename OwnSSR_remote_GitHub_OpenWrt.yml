@@ -263,7 +263,7 @@ custom:
     - { rule: "GEOIP,CN", group: "DIRECT" }
     - { rule: "MATCH", group: "🐟 漏网之鱼" }
 
-  clash_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/all_base.tpl
+  clash_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/GeneralClashConfig.yml
   #  surge_rule_base: https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/surge.conf
   #  surfboard_rule_base: base/surfboard.conf
   #  mellow_rule_base: base/mellow.conf
