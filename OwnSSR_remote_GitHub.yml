@@ -60,6 +60,18 @@ custom:
           ],
       }
     - {
+        name: Ⓜ️ 微软服务,
+        type: select,
+        rule:
+          [
+            "[]DIRECT",
+            "[]🚀 节点选择",
+            "^(?!(.*IPLC|.*游戏节点|.*超大带宽)).*$",
+            ".*(游戏节点).*",
+            ".*(IPLC).*",
+          ],
+      }
+    - {
         name: 🐟 漏网之鱼,
         type: select,
         rule:
@@ -128,7 +140,7 @@ custom:
     - {
         name: Ⓜ️ 微软云盘,
         type: select,
-        rule: ["[]♻️ 自动选择", "[]🚀 节点选择", "[]DIRECT"],
+        rule: ["[]DIRECT", "[]♻️ 自动选择", "[]🚀 节点选择"],
       }
     - {
         name: 📢 谷歌FCM,
@@ -174,6 +186,11 @@ custom:
     - {
         ruleset: "clash-classic:https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownmedia.yaml",
         group: "🌍 国外媒体",
+        interval: 43200,
+      }
+    - {
+        ruleset: "clash-classic:https://gcore.jsdelivr.net/gh/ACL4SSR/ACL4SSR/Clash/Providers/Ruleset/Microsoft.yaml",
+        group: "Ⓜ️ 微软服务",
         interval: 43200,
       }
     - {
