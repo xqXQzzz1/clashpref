@@ -217,11 +217,11 @@ tunnels:
   #全 yaml 配置
   - network: [tcp, udp] #  [tcp, udp]
     address: 127.0.0.1:7777 #配套fallback组 tcp:127.0.0.1:7777
-    target: 8.8.8.8:53
+    target: 8.8.8.8
     proxy: 🚀 节点选择
   - network: [tcp, udp] #  [tcp, udp]
     address: 127.0.0.1:7778 #配套fallback组 tcp://127.0.0.1:7778
-    target: 1.1.1.1:53
+    target: 1.1.1.1
     proxy: 🚀 节点选择
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
