@@ -19,13 +19,16 @@ mixed-port: 7890
 # 允许局域网的连接（可用来共享代理）
 allow-lan: false
 
-# 仅在将allow-lan设置为true时适用
-# #"*": 绑定所有IP地址
-# #192.168.122.11: 绑定单个IPv4地址
-# #"[aaaa::a8aa:ff:fe09:57d8]": 绑定单个IPv6地址
-# bind-address: "*"
+# 仅当 `allow-lan` 为 `true` 时有效
+# '*': 绑定所有 IP 地址
+# 192.168.122.11: 绑定单个 IPv4 地址
+# "[aaaa::a8aa:ff:fe09:57d8]": 绑定单个 IPv6 地址
+# bind-address: '*'
 
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
+# Clash 路由工作模式
+# rule: 基于规则的数据包路由
+# global: 所有数据包将被转发到单个节点
+# direct: 直接将数据包转发到互联网
 mode: Rule
 
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
@@ -47,18 +50,17 @@ ipv6: true
 # secret: ""
 
 profile:
-  # Store the `select` results in $HOME/.config/clash/.cache
-  # set false If you don't want this behavior
-  # when two different configurations have groups with the same name, the selected values are shared
+  # 将 `select` 手动选择 结果存储在 $HOME/.config/clash/.cache 中
+  # 如果不需要此行为, 请设置为 false
+  # 当两个不同的配置具有同名的组时, 将共享所选值
   store-selected: true
 
-  # persistence fakeip
+  # 持久化 fakeip
   store-fake-ip: true
 
 # 实验性功能
 experimental:
   ignore-resolve-fail: true # 忽略 DNS 解析失败，默认值为 true
-# interface-name: clash-tap # outbound interface name
 
 # 本地 SOCKS5 / HTTP(S) 服务认证
 # authentication:
@@ -80,11 +82,16 @@ dns:
   listen: 0.0.0.0:53
   # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
   # 仅填写 DNS 服务器的 IP 地址
-  # default-nameserver:
-  #   - 114.114.114.114
-  #   - 223.5.5.5
+  default-nameserver:
+    - 114.114.114.114
+    - 8.8.8.8
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+
+  # use-hosts: true # 查找 hosts 并返回 IP 记录
+
+  # search-domains: [local] # A/AAAA 记录的搜索域
+
   fake-ip-filter: # fake ip 白名单列表，如果你不知道这个参数的作用，请勿修改
     # 以下域名列表参考自 vernesong/OpenClash 项目，并由 Hackl0us 整理补充
     # === LAN ===
@@ -169,26 +176,26 @@ dns:
     - "stun.*.*"
     - "stun.*.*.*"
   nameserver:
-    # - dhcp://en0 # dns from dhcp
     - 223.5.5.5 # 阿里DNS
     - 180.76.76.76 # 百度DNS
-    - 114.114.114.114 # 114DNS
-    - 101.6.6.6 #清华大学DNS
-    # - https://sm2.doh.pub/dns-query #腾讯
-    # - https://dns.alidns.com/dns-query # 阿里 DoH DNS
-    # - https://doh.360.cn/dns-query # 360 DoH DNS
+    - tls://dns.rubyfish.cn:853 # DNS over TLS
+    - https://1.1.1.1/dns-query # DNS over HTTPS
+    - dhcp://en0 # 来自 dhcp 的 dns
+    # - '8.8.8.8#en0'
   fallback:
+    # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器
+    # 与 `nameservers` 中的服务器发送并发请求
+    # 当 GEOIP 国家不是 `CN` 时, 将使用 fallback 服务器的响应
+    #   - tcp://1.1.1.1
+    #   - 'tcp://1.1.1.1#en0'
     # - https://sm2.doh.pub/dns-query #腾讯
     # - https://dns.alidns.com/dns-query # 阿里 DoH DNS
-    # - 1.1.1.1
     # - 8.8.8.8 # 谷歌DNS
-    - tls://dns.rubyfish.cn:853
-    # - tls://1.0.0.1:853
     # - tls://dns.google:853
-    - https://dns.rubyfish.cn/dns-query
-    - https://cloudflare-dns.com/dns-query
+    # - https://dns.rubyfish.cn/dns-query
     # - https://dns.google/dns-query
-    # - https://sm2.doh.pub/dns-query #腾讯
+    - tcp://127.0.0.1:7777
+    - tcp://127.0.0.1:7778
   fallback-filter:
     geoip: true # 默认
     geoip-code: CN
@@ -199,6 +206,23 @@ dns:
       # - '+.facebook.com'
       # - '+.youtube.com'
       - "+.nfmovies.com"
+    # 通过特定的名称服务器查找域名
+    # nameserver-policy:
+    #   'www.baidu.com': '114.114.114.114'
+    #   '+.internal.crop.com': '10.0.0.1'
+tunnels:
+  ##单行配置
+  # - tcp/udp,127.0.0.1:6553,114.114.114.114:53,proxy
+  # - tcp,127.0.0.1:6666,rds.mysql.com:3306,vpn
+  #全 yaml 配置
+  - network: [tcp, udp] #  [tcp, udp]
+    address: 127.0.0.1:7777 #配套fallback组 tcp:127.0.0.1:7777
+    target: 8.8.8.8:53
+    proxy: 🚀 节点选择
+  - network: [tcp, udp] #  [tcp, udp]
+    address: 127.0.0.1:7778 #配套fallback组 tcp://127.0.0.1:7778
+    target: 1.1.1.1:53
+    proxy: 🚀 节点选择
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
 #   (2) clash 将选取 nameserver 列表内，解析最快的结果。
