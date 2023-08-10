@@ -14,7 +14,7 @@ payload:
 
   # Goose Goose Duck代理
 
-  - PROCESS-NAME,Goose Goose Duck.exe
+  - PROCESS-NAME,GooseGooseDuck.exe
   - PROCESS-NAME,UnityCrashHandler64.exe
   - DOMAIN-SUFFIX,gaggle.fun
   - DOMAIN,us-central1-gaggle-staging.cloudfunctions.net
