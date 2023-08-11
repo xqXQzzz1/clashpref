@@ -194,8 +194,8 @@ dns:
     # - tls://dns.google:853
     # - https://dns.rubyfish.cn/dns-query
     # - https://dns.google/dns-query
-    - tcp://127.0.0.1:77777
-    - tcp://127.0.0.1:77778
+    - tcp://127.0.0.1:32221
+    - tcp://127.0.0.1:32222
   fallback-filter:
     geoip: true # 默认
     geoip-code: CN
@@ -216,11 +216,11 @@ tunnels:
   # - tcp,127.0.0.1:6666,rds.mysql.com:3306,vpn
   #全 yaml 配置
   - network: [tcp] #  [tcp, udp]
-    address: 127.0.0.1:77777 #配套fallback组 tcp://127.0.0.1:77777
+    address: 127.0.0.1:32221 #配套fallback组 tcp://127.0.0.1:32221
     target: 8.8.8.8
     proxy: 🚀 节点选择
   - network: [tcp] #  [tcp, udp]
-    address: 127.0.0.1:77778 #配套fallback组 tcp://127.0.0.1:77778
+    address: 127.0.0.1:32222 #配套fallback组 tcp://127.0.0.1:32222
     target: 1.1.1.1
     proxy: 🚀 节点选择
 # 1. clash DNS 请求逻辑：
