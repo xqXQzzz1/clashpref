@@ -84,7 +84,6 @@ dns:
   # 仅填写 DNS 服务器的 IP 地址
   default-nameserver:
     - 114.114.114.114
-    - 8.8.8.8
   enhanced-mode: fake-ip # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
 
@@ -178,24 +177,18 @@ dns:
   nameserver:
     - 223.5.5.5 # 阿里DNS
     - 180.76.76.76 # 百度DNS
-    - tls://dns.rubyfish.cn:853 # DNS over TLS
-    - https://1.1.1.1/dns-query # DNS over HTTPS
+    - 119.29.29.29 #腾讯
     - dhcp://en0 # 来自 dhcp 的 dns
-    # - '8.8.8.8#en0'
   fallback:
     # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器
     # 与 `nameservers` 中的服务器发送并发请求
     # 当 GEOIP 国家不是 `CN` 时, 将使用 fallback 服务器的响应
-    #   - tcp://1.1.1.1
-    #   - 'tcp://1.1.1.1#en0'
-    # - https://sm2.doh.pub/dns-query #腾讯
-    # - https://dns.alidns.com/dns-query # 阿里 DoH DNS
-    # - 8.8.8.8 # 谷歌DNS
-    # - tls://dns.google:853
-    # - https://dns.rubyfish.cn/dns-query
-    # - https://dns.google/dns-query
-    - tcp://127.0.0.1:32221
-    - tcp://127.0.0.1:32222
+    - https://1.1.1.1/dns-query
+    - https://a.passcloud.xyz/dns-query
+    - https://doh.apad.pro/dns-query
+    - https://dns.quad9.net/dns-query
+    # - tcp://127.0.0.1:32221
+    # - tcp://127.0.0.1:32222
   fallback-filter:
     geoip: true # 默认
     geoip-code: CN
@@ -210,19 +203,19 @@ dns:
     # nameserver-policy:
     #   'www.baidu.com': '114.114.114.114'
     #   '+.internal.crop.com': '10.0.0.1'
-tunnels:
-  ##单行配置
-  # - tcp/udp,127.0.0.1:6553,114.114.114.114:53,proxy
-  # - tcp,127.0.0.1:6666,rds.mysql.com:3306,vpn
-  #全 yaml 配置
-  - network: [tcp] #  [tcp, udp]
-    address: 127.0.0.1:32221 #配套fallback组 tcp://127.0.0.1:32221
-    target: 8.8.8.8:53
-    proxy: 🚀 节点选择
-  - network: [tcp] #  [tcp, udp]
-    address: 127.0.0.1:32222 #配套fallback组 tcp://127.0.0.1:32222
-    target: 1.1.1.1:53
-    proxy: 🚀 节点选择
+# tunnels:
+#   ##单行配置
+#   # - tcp/udp,127.0.0.1:6553,114.114.114.114:53,proxy
+#   # - tcp,127.0.0.1:6666,rds.mysql.com:3306,vpn
+#   #全 yaml 配置
+#   - network: [tcp] #  [tcp, udp]
+#     address: 127.0.0.1:32221 #配套fallback组 tcp://127.0.0.1:32221
+#     target: 8.8.8.8:53
+#     proxy: 🚀 节点选择
+#   - network: [tcp] #  [tcp, udp]
+#     address: 127.0.0.1:32222 #配套fallback组 tcp://127.0.0.1:32222
+#     target: 1.1.1.1:53
+#     proxy: 🚀 节点选择
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
 #   (2) clash 将选取 nameserver 列表内，解析最快的结果。
