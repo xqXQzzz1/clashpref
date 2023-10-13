@@ -184,9 +184,9 @@ dns:
     # 与 `nameservers` 中的服务器发送并发请求
     # 当 GEOIP 国家不是 `CN` 时, 将使用 fallback 服务器的响应
     - https://1.1.1.1/dns-query
-    - https://a.passcloud.xyz/dns-query
     - https://doh.apad.pro/dns-query
     - https://dns.quad9.net/dns-query
+
     # - tcp://127.0.0.1:32221
     # - tcp://127.0.0.1:32222
   fallback-filter:
