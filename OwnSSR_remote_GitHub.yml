@@ -195,7 +195,7 @@ custom:
       }
     # 域名和no-resolve
     - {
-        ruleset: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml",
+        ruleset: "clash-classic:https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml",
         group: "Ⓜ️ 微软服务",
         interval: 43200,
       }
