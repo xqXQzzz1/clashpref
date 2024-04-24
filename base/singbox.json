@@ -36,11 +36,6 @@
         "outbound": ["any"],
         "server": "dns_resolver"
       },
-      //   {
-      //     "rule_set": "category-ads-all",
-      //     "server": "dns_block",
-      //     "disable_cache": true
-      //   },
       {
         "rule_set": "geosite-geolocation-!cn",
         "query_type": ["A", "AAAA"],
