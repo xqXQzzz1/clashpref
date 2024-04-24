@@ -28,7 +28,7 @@ exclude_remarks = [
   "^.*(乌克兰1).*$",
 ]
 
-[[custom_groups]]
+# [[custom_groups]]
 # import = "snippets/groups_forcerule.toml"
 
 [[custom_groups]]
