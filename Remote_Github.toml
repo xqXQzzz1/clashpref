@@ -269,9 +269,7 @@ interval = 43200
 
 [[rulesets]]
 group = "DIRECT"
-ruleset = "https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt"
-type = "surge-ruleset"
-interval = 43200
+ruleset = "[]GEOIP,CN"
 
 [[rulesets]]
 group = "🐟 漏网之鱼"
