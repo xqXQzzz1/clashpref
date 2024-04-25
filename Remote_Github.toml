@@ -267,9 +267,11 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
 type = "clash-classic"
 interval = 43200
 
-# [[rulesets]]
-# group = "DIRECT"
-# ruleset = "[]GEOIP,CN"
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://raw.githubusercontent.com/Hackl0us/GeoIP2-CN/release/CN-ip-cidr.txt"
+type = "surge-ruleset"
+interval = 43200
 
 [[rulesets]]
 group = "🐟 漏网之鱼"
