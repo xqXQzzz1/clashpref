@@ -1,0 +1,286 @@
+version = 1
+[custom]
+enable_rule_generator = true
+overwrite_original_rules = true
+
+# Options for custom base configuration file
+clash_rule_base = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/GeneralClashConfig.yml"
+surge_rule_base = "base/surge.conf"
+surfboard_rule_base = "base/surfboard.conf"
+mellow_rule_base = "base/mellow.conf"
+quan_rule_base = "base/quan.conf"
+quanx_rule_base = "base/quanx.conf"
+loon_rule_base = "base/loon.conf"
+sssub_rule_base = "base/shadowsocks_base.json"
+singbox_rule_base = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/base/singbox.json"
+
+# Options for adding emojis
+#add_emoji = true
+#remove_old_emoji = true
+
+# Options for filtering nodes
+include_remarks = []
+exclude_remarks = [
+  # '^(?=(\d\d\.|(A|I\+?|E\+?|H\+?)\.)).*$',
+  '^(?=((\d\d\.)|(I\.\[\d))).*$',
+  '^.*解锁.*\(本地\).*$',
+  "^.*(收费请举报).*$",
+  "^.*(乌克兰1).*$",
+]
+
+# [[custom_groups]]
+# import = "snippets/groups_forcerule.toml"
+
+[[custom_groups]]
+name = "♻️ 自动选择"
+type = "url-test"
+rule = ["^(?!(.*IPLC|.*游戏节点|.*专线)).*$"]
+url = "http://www.google.com/generate_204"
+interval = 1800
+timeout = 500
+tolerance = 100
+lazy = false
+disable-udp = false
+
+[[custom_groups]]
+name = "🚀 节点选择"
+type = "select"
+rule = [
+  "[]♻️ 自动选择",
+  "[]DIRECT",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "🌍 国外媒体"
+type = "select"
+rule = [
+  "[]♻️ 自动选择",
+  "[]🚀 节点选择",
+  "[]DIRECT",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "📲 社交软件"
+type = "select"
+rule = [
+  "[]♻️ 自动选择",
+  "[]🚀 节点选择",
+  "[]DIRECT",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "Ⓜ️ 微软服务"
+type = "select"
+rule = [
+  "[]DIRECT",
+  "[]🚀 节点选择",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "🐟 漏网之鱼"
+type = "select"
+rule = [
+  "[]DIRECT",
+  "[]🚀 节点选择",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "🎮 游戏论坛"
+type = "select"
+rule = [
+  "[]♻️ 自动选择",
+  "[]🚀 节点选择",
+  "[]DIRECT",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "🎮 游戏代理"
+type = "select"
+rule = ["[]DIRECT", ".*(游戏节点|IPLC|专线).*", "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$"]
+
+[[custom_groups]]
+name = "🧱 砖块代理"
+type = "select"
+rule = [
+  "[]♻️ 自动选择",
+  "[]🚀 节点选择",
+  "[]DIRECT",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
+name = "Ⓜ️ 微软云盘"
+type = "select"
+rule = ["[]DIRECT", "[]♻️ 自动选择", "[]🚀 节点选择"]
+
+
+# [[rulesets]]
+# import = ""
+# type = "surge-ruleset"
+# type = "quantumultx"
+# type = "clash-domain"
+# type = "clash-ipcidr"
+# type = "clash-classic"
+
+[[rulesets]]
+group = "🎮 游戏代理"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owngame.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🎮 游戏论坛"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owngamecom.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🧱 砖块代理"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownban.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "REJECT"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownban.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/owndirect.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🌍 国外媒体"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownmedia.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🚀 节点选择"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownproxy.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "Ⓜ️ 微软服务"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🌍 国外媒体"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/SteamCN/SteamCN_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🎮 游戏论坛"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Steam/Steam_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🎮 游戏论坛"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "Ⓜ️ 微软云盘"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/OneDrive/OneDrive_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🌍 国外媒体"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Porn.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🌍 国外媒体"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "📲 社交软件"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "📲 社交软件"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "📲 社交软件"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Instagram/Instagram_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "📲 社交软件"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Instagram/Instagram_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "📲 社交软件"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🚀 节点选择"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "DIRECT"
+ruleset = "[]GEOIP,CN"
+
+[[rulesets]]
+group = "🐟 漏网之鱼"
+ruleset = "[]FINAL"
+###################################
+[[template_args]]
+key = "clash.dns.port"
+value = "7890"
+[[template_args]]
+key = "clash.allow_lan"
+value = false
+[[template_args]]
+key = "clash.log_level"
+value = "info"
