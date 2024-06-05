@@ -22,7 +22,7 @@ singbox_rule_base = "https://gitrun.xqxzzz1.workers.dev/https://raw.githubuserco
 include_remarks = []
 exclude_remarks = [
   # '^(?=(\d\d\.|(A|I\+?|E\+?|H\+?)\.)).*$',
-  '^(?=((\d\d\.)|(I\.\[\d))).*$',
+  # '^(?=((\d\d\.)|(I\.\[\d))).*$',
   '^.*解锁.*\(本地\).*$',
   "^.*(收费请举报).*$",
   "^.*(乌克兰1).*$",
