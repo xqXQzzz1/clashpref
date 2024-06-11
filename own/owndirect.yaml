@@ -12,7 +12,9 @@ payload:
   - DOMAIN-KEYWORD,nfmovies
   - PROCESS-NAME,OUTLOOK.EXE
   - PROCESS-NAME,csgo.exe
-  - DOMAIN-SUFFIX,zxzj.me 
+  - DOMAIN-SUFFIX,zxzj.me
+  - DOMAIN-SUFFIX,v.smtcdns.com
+  - DOMAIN-SUFFIX,v.smtcdns.net
   - DOMAIN,download.epicgames.com
   - DOMAIN,blog.counter-strike.net
   - DOMAIN,t-rex.tzflie.com
@@ -28,4 +30,3 @@ payload:
   # - DOMAIN,steamuserimages-a.akamaihd.net
   # - DOMAIN,steambroadcast.akamaized.net
   # - DOMAIN,steamusercontent-a.akamaihd.net
-  
