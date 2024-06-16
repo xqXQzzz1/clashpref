@@ -178,7 +178,7 @@ dns:
     - 223.5.5.5 # 阿里DNS
     - 180.76.76.76 # 百度DNS
     - 119.29.29.29 #腾讯
-    - dhcp://en0 # 来自 dhcp 的 dns
+    # - dhcp://en0 # 来自 dhcp 的 dns
   fallback:
     # 当 `fallback` 存在时, DNS 服务器将向此部分中的服务器
     # 与 `nameservers` 中的服务器发送并发请求
