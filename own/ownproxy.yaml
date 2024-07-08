@@ -9,7 +9,7 @@ payload:
   # - SRC-PORT
   # - PROCESS-NAME
   # classical
-  
+
   - DOMAIN,mp3pro.xyz
   - DOMAIN,infocheats.net
   - DOMAIN,pcbeta.com
@@ -36,6 +36,7 @@ payload:
   - DOMAIN,xqxsub.herokuapp.com
   - DOMAIN,gpu.me
   - DOMAIN-SUFFIX,singlelogin.re
+  - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,mumuceo.com
   - DOMAIN,rectify11.weebly.com
   - PROCESS-NAME,tor.exe
