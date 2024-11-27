@@ -150,7 +150,7 @@ interval = 43200
 
 [[rulesets]]
 group = "🧱 砖块代理"
-ruleset = "https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/ownban.yaml"
+ruleset = "https://raw.githubusercontent.com/xqXQzzz1/clashpref/main/own/own.yaml"
 type = "clash-classic"
 interval = 43200
 
@@ -244,11 +244,6 @@ ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash
 type = "clash-classic"
 interval = 43200
 
-[[rulesets]]
-group = "📲 社交软件"
-ruleset = "https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/Instagram/Instagram_No_Resolve.yaml"
-type = "clash-classic"
-interval = 43200
 
 [[rulesets]]
 group = "📲 社交软件"
