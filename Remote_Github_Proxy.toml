@@ -186,7 +186,7 @@ interval = 43200
 
 [[rulesets]]
 group = "DIRECT"
-ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownload/GameDownload_No_Resolve.yaml"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN_No_Resolve.yaml"
 type = "clash-classic"
 interval = 43200
 
