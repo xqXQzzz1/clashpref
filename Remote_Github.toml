@@ -65,6 +65,17 @@ rule = [
 ]
 
 [[custom_groups]]
+name = "🤖 ChatGPT"
+type = "select"
+rule = [
+  "[]♻️ 自动选择",
+  "[]🚀 节点选择",
+  "[]DIRECT",
+  "^(?!(.*IPLC|.*游戏节点|.*超大带宽|.*专线)).*$",
+  ".*(游戏节点|IPLC|专线).*",
+]
+
+[[custom_groups]]
 name = "📲 社交软件"
 type = "select"
 rule = [
@@ -209,6 +220,18 @@ ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/h
 type = "clash-classic"
 interval = 43200
 
+
+[[rulesets]]
+group = "🤖 ChatGPT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
+
+[[rulesets]]
+group = "🤖 ChatGPT"
+ruleset = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BardAI/BardAI_No_Resolve.yaml"
+type = "clash-classic"
+interval = 43200
 
 [[rulesets]]
 group = "Ⓜ️ 微软云盘"
