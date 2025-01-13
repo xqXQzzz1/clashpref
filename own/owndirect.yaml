@@ -23,7 +23,7 @@ payload:
   - DOMAIN,pypi.tuna.tsinghua.edu.cn
   - DOMAIN-SUFFIX,rutracker
   - DOMAIN,cloudflare.epicgamescdn.com
-  - DOMAIN,cn.bing.com
+  # - DOMAIN,cn.bing.com
   # - DOMAIN-SUFFIX,bing.com
   # - DOMAIN,api.steampowered.com
   # - DOMAIN,steamcdn-a.akamaihd.net
