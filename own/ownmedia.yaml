@@ -22,3 +22,5 @@ payload:
   - DOMAIN-KEYWORD,hohoj
   - DOMAIN-KEYWORD,ggjav
   - DOMAIN-KEYWORD,99avcdn
+  - DOMAIN-SUFFIX,rou.video
+  - DOMAIN-REGEX,^v\.rn\d{3}\.xyz
